@@ -44,9 +44,9 @@
 def printRow(n):                                               
     print '|00000*****|'[:-1-n] + ' '*3 + '|00000*****|'[-1-n:]  
 
-def print_abacus(n):
-    j = 1000000000
-    while j>=1:
+def print_abacus(n):     /*def print_abacus(v):*/
+    j = 1000000000       /*s,n="|00000*****|",("0"*10+str(v))[-10:]*/
+    while j>=1:          /* for c in n:x=-int(c)-1;print s[:x]+"   "+s[x:]*/
        printRow(n/j)
        n, j = n%j, j/10
        
